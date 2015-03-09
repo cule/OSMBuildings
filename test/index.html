@@ -79,23 +79,16 @@
   <script>
     var map = new GLMap('map', {
       center: { latitude:52.52000, longitude:13.41000 },
-//    tilt: 0,
-//    rotation: 0,
+      tilt: 0,
+      rotation: 0,
       zoom: 16,
       minZoom: 14.5,
       maxZoom: 22
     });
 
-//  new GLMap.TileLayer('http://{s}.tiles.mapbox.com/v3/osmbuildings.kbpalbpk/{z}/{x}/{y}.png', { fixedZoom:16 }).addTo(map);
-    new GLMap.TileLayer('http://tile.stamen.com/toner/{z}/{x}/{y}.png', { fixedZoom:16 }).addTo(map);
+    new GLMap.TileLayer('http://{s}.tiles.mapbox.com/v3/osmbuildings.kbpalbpk/{z}/{x}/{y}.png', { fixedZoom:16 }).addTo(map);
 
-    var osmb = new OSMBuildings({
-//    src: 'tiles/{x},{y},{z}.json'
-//    map: map
-    })
-//    .addObject('OBJ', '../scratch/obj-loader/PLAN_BASIC.obj', { latitude:52.5429942, longitude:13.4279453 })
-//    .addObject('GeoJSON', 'tiles/35209,21492,16.json')
-      .addTo(map);
+    var osmb = new OSMBuildings({}).addTo(map);
 
     //*************************************************************************
 
